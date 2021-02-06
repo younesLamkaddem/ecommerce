@@ -1,4 +1,5 @@
 export const CartTypes = {
     GET_TOGGLE : 'GET_TOGGLE',
-    ADD_ITEM : 'ADD_ITEM'
+    ADD_ITEM : 'ADD_ITEM',
+    REMOVE_ITEM_FROM_CART_ITEMS :'REMOVE_ITEM_FROM_CART_ITEMS'
 }

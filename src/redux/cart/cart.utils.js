@@ -13,3 +13,6 @@ export const AddItemToCart = (CartItems , NewItem) => {
 
     return [...CartItems , {...NewItem , quantity :1 }]
 }
+
+
+
