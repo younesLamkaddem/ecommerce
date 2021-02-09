@@ -4,14 +4,13 @@ import {Route , Switch , Redirect} from 'react-router-dom';
 import Shop from './pages/shop/shop.component'
 import Header from './components/header/header.component'
 import SigninSignout from './components/signin-signout/signin-signout.component'
-import {auth , createUserProfileDocument} from './components/firebase/firebase.utils'
+import {auth , createUserProfileDocument } from './components/firebase/firebase.utils'
 import React from 'react'
 import { connect } from 'react-redux'
 import {SetCurrentUser} from './redux/user/user.actions'
 import {createStructuredSelector} from 'reselect'
 import {selectCurrentUser} from './redux/user/user.selectors'
 import Checkout from './pages/checkout/checkout.component'
-
 class App extends React.Component {
 
 
@@ -20,7 +19,7 @@ class App extends React.Component {
 
   componentDidMount(){
 
-    const {SetCurrentUser} = this.props ;
+    const {SetCurrentUser } = this.props ;
     this.unsubscribeFromAuth =  auth.onAuthStateChanged(async user => {
       
       if(user){
@@ -38,6 +37,7 @@ class App extends React.Component {
       }
 
     })
+
   }
 
   componentWillUnmount(){
@@ -67,7 +67,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector ({
-  currentUser : selectCurrentUser
+  currentUser : selectCurrentUser,
 })
 
 

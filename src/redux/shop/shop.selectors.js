@@ -14,11 +14,11 @@ export const selectShopData = createSelector(
 export const selectCollection = urlParamPassed =>
     createSelector(
          [selectShopData],
-         collections => collections[urlParamPassed]
+         collections => collections ? collections[urlParamPassed] : null
     )
 
 
 export const selectCollectionsForPreview  = createSelector(
     [selectShopData],
-    collections => Object.keys(collections).map( key => collections[key])
+    collections => collections ? Object.keys(collections).map( key => collections[key]) : []
 )
